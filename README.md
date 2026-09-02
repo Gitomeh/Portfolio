@@ -12,7 +12,7 @@ This is a professional portfolio website for Gerald Njoroge Gitau, an AI & Full-
 - Responsive single-page design with smooth navigation
 - Hero section with profile image and call-to-action
 - About section detailing professional background
-- Skills section with categorized technical abilities
+- Skills section with 4 categories (Frontend, Backend, Database, DevOps & Deployment)
 - Experience section showing work history
 - Projects section showcasing 6 portfolio projects
 - Contact form and contact information
