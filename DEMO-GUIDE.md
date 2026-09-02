@@ -21,7 +21,7 @@ This guide provides a script/plan for a 3–5 minute live demo of the Portfolio 
 "Here's the hero section with my profile image and a brief introduction. Scrolling down, the About section provides more detail about my background as a Full-Stack Software Engineer and AI Engineer, highlighting my experience with React, Next.js, Node.js, and AI technologies."
 
 **Skills Section** (1:00–1:30)
-"The Skills section categorizes my technical abilities into Frontend, Backend, and Database/AI areas. Each skill has a visual progress bar. Notice how the bars animate when you scroll to this section — this is implemented using JavaScript Intersection Observer for a smooth user experience."
+"The Skills section categorizes my technical abilities into 4 areas: Frontend, Backend, Database, and DevOps & Deployment. It now includes skills from my recent Vercel projects like Three.js for 3D visualization, Accessibility/WCAG for inclusive design, AI-Assisted Programming, Machine Learning, and DevOps skills like Vercel deployment and CI/CD. Each skill has a visual progress bar. Notice how the bars animate when you scroll to this section — this is implemented using JavaScript Intersection Observer for a smooth user experience."
 
 **Experience Section** (1:30–1:45)
 "The Experience section shows my professional history, including my current role as an AI Intern at FlyRank AI, my freelance work at GEWILS Technologies, and my previous position at Nyandarua County Assembly."
