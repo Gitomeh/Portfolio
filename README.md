@@ -93,6 +93,12 @@ Browser Rendering
   ├── CSS animations
   └── Event handling
   ↓
+Skills Display
+  ├── Frontend (HTML/CSS, JavaScript/TypeScript, React/Next.js, Three.js/WebGL, Accessibility)
+  ├── Backend (Node.js, Express.js, Python/AI, AI-Assisted Programming, Machine Learning)
+  ├── Database (SQL, MongoDB, LLM Applications)
+  └── DevOps & Deployment (Vercel, GitHub/Git, CI/CD)
+  ↓
 Static Display
 ```
 
