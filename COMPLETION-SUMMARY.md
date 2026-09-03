@@ -68,6 +68,8 @@
 - ✅ Made About image more compact
 - ✅ Responsive design for skills section on mobile
 - ✅ Fixed skill progress bar inconsistencies
+- ✅ Added LinkedIn and GitHub contact links to contact section
+- ✅ Fixed LinkedIn URL in footer to include trailing slash
 
 ### Repository Status
 - ✅ All changes committed and pushed to GitHub
