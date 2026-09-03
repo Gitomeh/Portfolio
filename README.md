@@ -73,7 +73,7 @@ This is a professional portfolio website for Gerald Njoroge Gitau, an AI & Full-
 
 ### Contact
 - Use the contact form to send a message
-- Alternatively, use the provided email, phone, or social media links
+- Alternatively, use the provided email, phone, location, LinkedIn, or GitHub links
 - Note: The contact form currently shows an alert message (no backend integration)
 
 ## Architecture
