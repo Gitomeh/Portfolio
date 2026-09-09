@@ -390,52 +390,52 @@
             justify-content: center;
             font-size: 1.1rem;
         }
-        .contact-form {
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
             background: #f9f9f9;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #555;
-        }
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: border 0.3s ease;
-        }
-        .form-control:focus {
-            outline: none;
-            border-color: #ff6b6b;
-        }
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-        .submit-btn {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-            color: white;
-            border: none;
-            padding: 12px 30px;
+        .contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 20px;
             border-radius: 50px;
-            cursor: pointer;
+            text-decoration: none;
             font-weight: bold;
             font-size: 1rem;
             transition: all 0.3s ease;
+            color: white;
         }
-        .submit-btn:hover {
+        .contact-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .contact-button i {
+            font-size: 1.3rem;
+        }
+        .whatsapp-button {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+        }
+        .whatsapp-button:hover {
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+        }
+        .linkedin-button {
+            background: linear-gradient(45deg, #0077B5, #005885);
+        }
+        .linkedin-button:hover {
+            box-shadow: 0 10px 20px rgba(0, 119, 181, 0.4);
+        }
+        .github-button {
+            background: linear-gradient(45deg, #333, #24292e);
+        }
+        .github-button:hover {
+            box-shadow: 0 10px 20px rgba(51, 51, 51, 0.4);
         }
         
         /* Availability Item */
@@ -583,521 +583,248 @@
     </style>
 </head>
 <body>
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Primary navigation">
         <div class="container">
             <div class="nav-container">
-                <div class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul class="nav-links">
+                <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#skills">SKILLS</a></li>
                     <li><a href="#experience">EXPERIENCE</a></li>
                     <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#education">EDUCATION</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <img src="images/gg.png" alt="Gerald Njoroge Gitau - Full-Stack Software Engineer and AI Engineer" class="profile-image" loading="lazy">
-            <h1>Gerald Njoroge Gitau</h1>
-            <p>AI & Full-Stack Developer | React | Next.js | Node.js | Python | LLMs | AWS | Azure</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
-        <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
-        <div class="particle" style="top: 60%; left: 85%; animation-delay: 1s;"></div>
-        <div class="particle" style="top: 30%; left: 75%; animation-delay: 2s;"></div>
-        <div class="particle" style="top: 80%; left: 20%; animation-delay: 3s;"></div>
-        <div class="particle" style="top: 45%; left: 60%; animation-delay: 4s;"></div>
-    </section>
-
-    <section id="about" class="section-light">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello! I'm Gerald Njoroge Gitau, a Full-Stack Software Engineer and AI Engineer. I specialize in React, Next.js, Node.js, Python, and AI technologies to build scalable, secure applications.</p>
-                    <p>I use AI-assisted development, prompt engineering, and agentic AI workflows to automate complex tasks and solve real-world business challenges. Currently an AI Intern at FlyRank AI, I work with LLMs, model evaluation, and data annotation.</p>
-                </div>
-                <div class="about-image">
-                    <img src="images/gg.png" alt="Gerald Njoroge Gitau working on a software project" loading="lazy">
-                </div>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="images/gg.png" alt="Gerald Njoroge Gitau" class="profile-image" loading="lazy">
+                <h1>Gerald Njoroge Gitau</h1>
+                <p>AI &amp; Full-Stack Developer | AI Engineer | Software Developer</p>
+                <p>Nakuru, Kenya &nbsp;|&nbsp; +254 715 366 415 &nbsp;|&nbsp; ggtomeh@gmail.com</p>
+                <a href="#projects" class="cta-button">View My Work</a>
             </div>
-        </div>
-    </section>
+            <div class="particle" style="top:20%;left:10%;animation-delay:0s"></div>
+            <div class="particle" style="top:60%;left:85%;animation-delay:1s"></div>
+            <div class="particle" style="top:30%;left:75%;animation-delay:2s"></div>
+            <div class="particle" style="top:80%;left:20%;animation-delay:3s"></div>
+            <div class="particle" style="top:45%;left:60%;animation-delay:4s"></div>
+        </section>
 
-    <section id="skills" class="section-dark">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Frontend</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>HTML/CSS</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
+        <section id="about" class="section-light">
+            <div class="container">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>AI and Full-Stack Developer with practical experience building and deploying web applications, AI-powered solutions, business systems, POS platforms, and automation tools.</p>
+                        <p>Strong front-end foundation with React and Next.js, combined with hands-on experience in Node.js, Express.js, REST APIs, databases, authentication, and cloud deployment.</p>
+                        <p>Completed the FlyRank AI Internship with independently qualified tracks in AI Fluency and Frontend AI Engineering. Experienced in Generative AI, LLMs, prompt engineering, AI-assisted development, model evaluation, data annotation, and AI-powered application development.</p>
+                        <p>Currently undertaking an internship focused on Backend Development and UI/UX Design, expanding skills in server-side development, APIs, databases, authentication, user experience, wireframing, prototyping, and user-centered digital product design.</p>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>JavaScript / TypeScript</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>React / Next.js</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Three.js / WebGL</span>
-                            <span>82%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 82%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Accessibility / WCAG</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Node.js</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Express.js / REST APIs</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 82%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Python / AI</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>AI-Assisted Programming</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Machine Learning</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Database</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>SQL / Databases</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>MongoDB</span>
-                            <span>82%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 82%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>LLM Applications / Agentic AI</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> DevOps & Deployment</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Vercel</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>GitHub / Git</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>CI/CD</span>
-                            <span>82%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 82%"></div>
-                        </div>
+                    <div class="about-image">
+                        <img src="images/gg.png" alt="Professional portrait of Gerald Njoroge Gitau" loading="lazy">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="experience" class="section-dark"><div class="container"><h2 class="section-title">Experience</h2><div class="about-text">
-<h3>Freelance Full-Stack &amp; AI Engineer | GEWILS Technologies Ltd.</h3><p><strong>March 2024 – August 2026</strong></p><p>Designed, developed, and deployed 16 websites, web applications, AI-powered solutions, and custom business systems. Consulted with clients, integrated APIs and payment gateways, and deployed applications using AWS, Microsoft Azure, Vercel, and other cloud platforms.</p>
-<br><h3>AI Intern | FlyRank AI</h3><p><strong>April 2026 – Present</strong></p><p>Participating in practical work involving generative AI, LLMs, automation, AI workflows, prompt engineering, model evaluation, quality assurance, and data annotation.</p>
-<br><h3>ICT Assistant | Nyandarua County Assembly</h3><p><strong>February 2014 – March 2024</strong></p><p>Provided ICT support to 73 staff members, resolving hardware, software, networking, peripheral, and systems issues. Supported infrastructure maintenance and trained staff on ICT systems and equipment.</p>
-</div></div></section>
-
-    <section id="projects" class="section-light">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <!-- Original Project 1: Gewils E-Commerce -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('images/banner1.png');">
-                        <div class="project-badge">Main Project</div>
+        <section id="skills" class="section-dark">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code" aria-hidden="true"></i> Frontend</h3>
+                        <p>React, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, Responsive Design</p>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Gewils E-Commerce</h3>
-                        <p class="project-description">Complete e-commerce solution with product management, secure checkout, and admin dashboard.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://gitomeh.github.io/Gewils-website/" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/Gitomeh" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server" aria-hidden="true"></i> Backend</h3>
+                        <p>Node.js, Express.js, REST APIs, Authentication, API Integration</p>
                     </div>
-                </div>
-                
-                <!-- Project 2: Access Lens -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('images/dashboard.jpg');">
-                        <div class="project-badge">Featured</div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-database" aria-hidden="true"></i> Databases</h3>
+                        <p>MongoDB, MySQL, PostgreSQL, SQLite</p>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Access Lens</h3>
-                        <p class="project-description">Accessibility-focused web application with enhanced user experience features and inclusive design principles.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">Vercel</span>
-                            <span class="tech-tag">Accessibility</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://access-lens-coral.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/Gitomeh" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-brain" aria-hidden="true"></i> AI</h3>
+                        <p>Generative AI, LLMs, Prompt Engineering, AI-Assisted Development, Model Evaluation, Data Annotation, Model Context Protocol, AI Agents/Subagents</p>
                     </div>
-                </div>
-                
-                <!-- Project 3: Car Care AI -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('images/medical.jpg');">
-                        <div class="project-badge">AI Project</div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-pen-ruler" aria-hidden="true"></i> UI/UX</h3>
+                        <p>User-Centered Design, Wireframing, Prototyping, Responsive UI Design, Accessibility, Design-to-Code Workflows</p>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Car Care AI</h3>
-                        <p class="project-description">AI-powered automotive maintenance platform with predictive diagnostics and service recommendations.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Vercel</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://car-care-ai-capstone.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/Gitomeh" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-cloud" aria-hidden="true"></i> Cloud &amp; Tools</h3>
+                        <p>AWS, Azure, Vercel, Git, GitHub, VS Code, Claude, Windsurf</p>
                     </div>
-                </div>
-                
-                <!-- Project 4: RightNest Nightcare -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('images/cloud.jpg');">
-                        <div class="project-badge">Featured</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">RightNest Nightcare</h3>
-                        <p class="project-description">Healthcare platform for night care services with patient monitoring and staff management.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Vercel</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://rightnest-nightcare.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/Gitomeh" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 5: Nairobi 3D -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('images/weather.jpg');">
-                        <div class="project-badge">3D Project</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Nairobi 3D</h3>
-                        <p class="project-description">Interactive 3D visualization of Nairobi city with immersive exploration and geographic data.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Three.js</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">WebGL</span>
-                            <span class="tech-tag">Vercel</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://nairobi-3-d.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/Gitomeh" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6: Security System -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('images/scheduling.jpg');">
-                        <div class="project-badge">Security</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Security System Bundle Builders</h3>
-                        <p class="project-description">Comprehensive security management platform with customizable bundles and real-time monitoring.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">Vercel</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://security-system-bundle-builders.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/Gitomeh" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-gears" aria-hidden="true"></i> Systems</h3>
+                        <p>Web Applications, E-Commerce, POS Systems, Business Systems, Automation Platforms</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section-light">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p><a href="mailto:ggtomeh@gmail.com">ggtomeh@gmail.com</a></p>
+        <section id="experience" class="section-light">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Backend Development &amp; UI/UX Design Intern</h3>
+                            <p><strong>2026 – Present</strong></p>
+                            <p class="project-description">Developing practical skills in backend software development and UI/UX design. Building server-side applications and RESTful APIs, working with databases, data modeling, authentication, API integration, backend architecture, wireframes, prototypes, user flows, and user-centered product design.</p>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p><a href="tel:+254715366415">+254 715 366 415</a></p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">AI Intern — FlyRank AI</h3>
+                            <p><strong>July 2026 – September 2026</strong></p>
+                            <p class="project-description">Completed independently qualified tracks in AI Fluency and Front-end AI Engineering. Completed 25 internship assignments, 3/3 accepted capstone projects, and 16 Anthropic Academy courses. Worked on Generative AI, LLMs, automation, model evaluation, data annotation, prompt engineering, and AI-powered software projects.</p>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Nakuru, Kenya</p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Freelance Full-Stack &amp; AI Engineer — GEWILS Technologies Ltd.</h3>
+                            <p><strong>March 2024 – August 2026</strong></p>
+                            <p class="project-description">Designed and deployed 26 websites, web applications, AI solutions, and custom business systems. Built full-stack applications with React, Next.js, JavaScript, TypeScript, Node.js, REST APIs, databases, and authentication. Integrated third-party APIs, payment gateways, AI services, and deployed production applications using AWS, Azure, and Vercel.</p>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <p><a href="https://www.linkedin.com/in/geraldgitau/" target="_blank" rel="noopener noreferrer">linkedin.com/in/geraldgitau</a></p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">ICT Assistant — Nyandarua County Assembly</h3>
+                            <p><strong>February 2014 – March 2024</strong></p>
+                            <p class="project-description">Provided ICT support to 73 staff across computers, applications, printers, networks, and ICT systems. Developed and maintained websites, POS systems, inventory systems, and business solutions, while gathering requirements and maintaining ICT infrastructure.</p>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <p><a href="https://github.com/Gitomeh" target="_blank" rel="noopener noreferrer">github.com/Gitomeh</a></p>
-                        </div>
-                    </div>
-                    <div class="availability-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Availability</h3>
-                            <div class="availability-badge">
-                                <i class="fas fa-check-circle"></i>
-                                24/7 SERVICE
-                            </div>
-                            <p style="font-size: 0.9rem; color: #666; margin-top: 8px;">
-                                Immediate responses guaranteed
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="projects" class="section-light">
+            <div class="container">
+                <h2 class="section-title">Selected Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image" style="background-image:url('images/medical.jpg')" role="img" aria-label="Car Care AI project preview">
+                            <div class="project-badge">AI Project</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Car Care AI</h3>
+                            <p class="project-description">AI-powered vehicle service management platform for customer interactions, service management, and AI-powered workflows.</p>
+                            <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">Express.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">AI</span><span class="tech-tag">Vercel</span></div>
+                            <div class="project-links"><a href="https://car-care-ai-capstone.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a></div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image" style="background-image:url('images/dashboard.jpg')" role="img" aria-label="AccessLens accessibility project preview">
+                            <div class="project-badge">Accessibility</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AccessLens</h3>
+                            <p class="project-description">Accessibility-focused web platform built to support more inclusive digital experiences through semantic HTML, keyboard navigation, responsive design, and accessibility-focused engineering.</p>
+                            <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Next.js</span><span class="tech-tag">TypeScript</span><span class="tech-tag">WCAG</span><span class="tech-tag">Vercel</span></div>
+                            <div class="project-links"><a href="https://access-lens-coral.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a></div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">MediAI Online Doctor</h3>
+                            <p class="project-description">AI-powered healthcare platform providing AI-assisted health information and user interaction workflows through responsive React/Next.js interfaces.</p>
+                            <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Next.js</span><span class="tech-tag">JavaScript</span><span class="tech-tag">AI</span><span class="tech-tag">REST APIs</span><span class="tech-tag">Vercel</span></div>
+                            <div class="project-links"><a href="https://mediai-onlinedoctor.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section-dark">
+            <div class="container">
+                <h2 class="section-title">Education &amp; Training</h2>
+                <div class="projects-grid">
+                    <article class="project-card"><div class="project-content"><h3 class="project-title">Mount Kenya University</h3><p><strong>Bachelor of Science in Information Technology</strong></p><p class="project-description">September 2013 – November 2018</p></div></article>
+                    <article class="project-card"><div class="project-content"><h3 class="project-title">Nyandarua Polytechnic</h3><p><strong>Diploma in Information Technology</strong></p><p class="project-description">February 2008 – November 2011</p></div></article>
+                    <article class="project-card"><div class="project-content"><h3 class="project-title">Delight College</h3><p><strong>Certificate in Networking, Printer Repair &amp; PABX Installation</strong></p><p class="project-description">March 2012 – November 2012</p></div></article>
+                </div>
+                <div class="about-text" style="max-width:100%;margin-top:35px">
+                    <h3>Certifications &amp; Training</h3>
+                    <p>FlyRank AI Internship — AI Fluency; FlyRank AI Internship — Front-end AI Engineering; Anthropic Academy — 16 completed courses; AI Fluency: Framework &amp; Foundations; Claude 101; Claude Code 101; Claude Code in Action; Claude Platform 101; Introduction to Model Context Protocol; Model Context Protocol: Advanced Topics; Introduction to Subagents; AI Fluency for Builders; Deep Learning Fundamentals; Prompt Engineering; Python for Data Science.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-light">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item"><i class="fas fa-envelope" aria-hidden="true"></i><div><h3>Email</h3><p><a href="mailto:ggtomeh@gmail.com">ggtomeh@gmail.com</a></p></div></div>
+                        <div class="contact-item"><i class="fas fa-phone" aria-hidden="true"></i><div><h3>Phone</h3><p><a href="tel:+254715366415">+254 715 366 415</a></p></div></div>
+                        <div class="contact-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><div><h3>Location</h3><p>Nakuru, Kenya</p></div></div>
+                        <div class="contact-item"><i class="fab fa-linkedin" aria-hidden="true"></i><div><h3>LinkedIn</h3><p><a href="https://linkedin.com/in/geraldgitau" target="_blank" rel="noopener noreferrer">linkedin.com/in/geraldgitau</a></p></div></div>
+                        <div class="contact-item"><i class="fab fa-github" aria-hidden="true"></i><div><h3>GitHub</h3><p><a href="https://github.com/Gitomeh" target="_blank" rel="noopener noreferrer">github.com/Gitomeh</a></p></div></div>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/254715366415" class="contact-button whatsapp-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            WhatsApp
+                        </a>
+                        <a href="https://linkedin.com/in/geraldgitau" class="contact-button linkedin-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/Gitomeh" class="contact-button github-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/Gitomeh" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/geraldgitau/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Gitomeh" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/geraldgitau/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
             </div>
             <p>&copy; <span id="year"></span> Gerald Njoroge Gitau. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
-        });
-        
-        // Smooth scrolling for anchor links
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                
-                // Close mobile menu if open
-                const navLinks = document.querySelector('.nav-links');
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
                 navLinks.classList.remove('active');
-                document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-expanded', 'false');
             });
         });
-        
-        // Mobile menu toggle
+
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
-        
         menuToggle.addEventListener('click', () => {
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!expanded));
             navLinks.classList.toggle('active');
         });
-        
-        // Animate skill bars on scroll
-        const animateSkills = () => {
-            const skillBars = document.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 100);
-            });
-        };
-        
-        // Intersection Observer for skill animation
-        const skillsSection = document.querySelector('#skills');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateSkills();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
-        
-        if (skillsSection) {
-            observer.observe(skillsSection);
-        }
-        
-        // Update copyright year
+
         document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Thank you for your message! I will get back to you soon.');
-                contactForm.reset();
-            });
-        }
     </script>
 </body>
 </html>
