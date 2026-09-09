@@ -8,7 +8,7 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             background: #1a3e2f;
@@ -109,8 +109,14 @@
         .hero h1 {
             font-size: clamp(2.5rem, 5vw, 3.5rem);
             margin-bottom: 1rem;
-            opacity: 0; 
+            opacity: 0;
             animation: fadeInUp 1s ease forwards;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .hero p {
             font-size: clamp(1.1rem, 2vw, 1.3rem);
@@ -178,6 +184,32 @@
             background: rgba(0, 0, 0, 0.7);
             color: white;
         }
+        .section-dark .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .section-dark .project-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .section-dark .project-title {
+            color: white;
+            font-weight: 600;
+        }
+        .section-dark .project-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .section-dark .tech-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .section-dark .project-content strong {
+            color: #ff6b6b;
+        }
         .section-light {
             background: white;
             color: #333;
@@ -209,22 +241,7 @@
         .about-text {
             flex: 1;
             min-width: 300px;
-            max-width: 600px;
-        }
-        .about-image {
-            flex: 0 0 auto;
-            min-width: 250px;
-            max-width: 350px;
-            text-align: center;
-        }
-        .about-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-        .about-image img:hover {
-            transform: scale(1.02);
+            max-width: 800px;
         }
         
         /* Skills Section */
@@ -546,6 +563,9 @@
             .about-content {
                 flex-direction: column;
             }
+            .about-text {
+                max-width: 100%;
+            }
             .section-title {
                 font-size: 2rem;
             }
@@ -622,14 +642,11 @@
             <div class="container">
                 <h2 class="section-title">Professional Summary</h2>
                 <div class="about-content">
-                    <div class="about-text">
+                    <div class="about-text" style="max-width: 100%;">
                         <p>AI and Full-Stack Developer with practical experience building and deploying web applications, AI-powered solutions, business systems, POS platforms, and automation tools.</p>
                         <p>Strong front-end foundation with React and Next.js, combined with hands-on experience in Node.js, Express.js, REST APIs, databases, authentication, and cloud deployment.</p>
                         <p>Completed the FlyRank AI Internship with independently qualified tracks in AI Fluency and Frontend AI Engineering. Experienced in Generative AI, LLMs, prompt engineering, AI-assisted development, model evaluation, data annotation, and AI-powered application development.</p>
                         <p>Currently undertaking an internship focused on Backend Development and UI/UX Design, expanding skills in server-side development, APIs, databases, authentication, user experience, wireframing, prototyping, and user-centered digital product design.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/gg.png" alt="Professional portrait of Gerald Njoroge Gitau" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -741,6 +758,30 @@
                             <div class="project-links"><a href="https://mediai-onlinedoctor.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a></div>
                         </div>
                     </article>
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <p class="project-description">Full-stack e-commerce solution with product management, shopping cart, payment integration, and admin dashboard built with React and Node.js.</p>
+                            <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">Express.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Stripe</span><span class="tech-tag">AWS</span></div>
+                            <div class="project-links"><a href="#" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a></div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Task Management System</h3>
+                            <p class="project-description">Collaborative task management application with real-time updates, team collaboration features, and progress tracking using Next.js and PostgreSQL.</p>
+                            <div class="project-tech"><span class="tech-tag">Next.js</span><span class="tech-tag">TypeScript</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Socket.io</span><span class="tech-tag">Tailwind</span><span class="tech-tag">Vercel</span></div>
+                            <div class="project-links"><a href="#" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a></div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">AI Content Generator</h3>
+                            <p class="project-description">AI-powered content generation tool using LLMs to create blog posts, social media content, and marketing copy with customizable templates.</p>
+                            <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Python</span><span class="tech-tag">OpenAI API</span><span class="tech-tag">FastAPI</span><span class="tech-tag">AI</span><span class="tech-tag">Azure</span></div>
+                            <div class="project-links"><a href="#" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a></div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -749,9 +790,9 @@
             <div class="container">
                 <h2 class="section-title">Education &amp; Training</h2>
                 <div class="projects-grid">
-                    <article class="project-card"><div class="project-content"><h3 class="project-title">Mount Kenya University</h3><p><strong>Bachelor of Science in Information Technology</strong></p><p class="project-description">September 2013 – November 2018</p></div></article>
-                    <article class="project-card"><div class="project-content"><h3 class="project-title">Nyandarua Polytechnic</h3><p><strong>Diploma in Information Technology</strong></p><p class="project-description">February 2008 – November 2011</p></div></article>
-                    <article class="project-card"><div class="project-content"><h3 class="project-title">Delight College</h3><p><strong>Certificate in Networking, Printer Repair &amp; PABX Installation</strong></p><p class="project-description">March 2012 – November 2012</p></div></article>
+                    <article class="project-card"><div class="project-content"><h3 class="project-title">Mount Kenya University</h3><p style="color: #ff6b6b; font-weight: 600; margin: 10px 0;">Bachelor of Science in Information Technology</p><p class="project-description">September 2013 – November 2018</p></div></article>
+                    <article class="project-card"><div class="project-content"><h3 class="project-title">Nyandarua Polytechnic</h3><p style="color: #ff6b6b; font-weight: 600; margin: 10px 0;">Diploma in Information Technology</p><p class="project-description">February 2008 – November 2011</p></div></article>
+                    <article class="project-card"><div class="project-content"><h3 class="project-title">Delight College</h3><p style="color: #ff6b6b; font-weight: 600; margin: 10px 0;">Certificate in Networking, Printer Repair &amp; PABX Installation</p><p class="project-description">March 2012 – November 2012</p></div></article>
                 </div>
                 <div class="about-text" style="max-width:100%;margin-top:35px">
                     <h3>Certifications &amp; Training</h3>
